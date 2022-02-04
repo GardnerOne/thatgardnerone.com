@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .brand-transition {
+        @apply transition-colors duration-75 ease-in-out;
+    }
+
+    /* Tailwind overrides */
+    .text-base {
+        @apply leading-relaxed;
+    }
+
+    .text-sm {
+        @apply leading-relaxed;
+    }
+}
