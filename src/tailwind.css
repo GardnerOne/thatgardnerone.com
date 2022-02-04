@@ -15,4 +15,10 @@
     .text-sm {
         @apply leading-relaxed;
     }
+
+}
+
+/* Custom CSS */
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
 }

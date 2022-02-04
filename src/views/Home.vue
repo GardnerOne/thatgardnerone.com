@@ -10,13 +10,13 @@
         </main>
         <Aside>
             <AsideSection title="Who to follow">
-              <ul role="list" class="-my-4 divide-y divide-zinc-200">
+              <ul role="list" class="-my-4 divide-y divide-zinc-600">
                 <li v-for="user in whoToFollow" :key="user.handle" class="flex items-center py-4 space-x-3">
                   <div class="flex-shrink-0">
                     <img class="h-8 w-8 rounded-full" :src="user.imageUrl" alt=""/>
                   </div>
                   <div class="min-w-0 flex-1">
-                    <p class="text-sm font-medium text-zinc-900">
+                    <p class="text-sm font-medium text-zinc-100">
                       <a :href="user.href">{{ user.name }}</a>
                     </p>
                     <p class="text-sm text-zinc-500">
@@ -25,29 +25,29 @@
                   </div>
                   <div class="flex-shrink-0">
                     <button type="button"
-                            class="inline-flex items-center px-3 py-0.5 rounded-full bg-emerald-50 text-sm font-medium text-emerald-700 hover:bg-emerald-100">
-                      <PlusSmIcon class="-ml-1 mr-0.5 h-5 w-5 text-emerald-400" aria-hidden="true"/>
+                            class="inline-flex items-center px-3 py-0.5 rounded-full bg-zinc-300 text-sm font-medium text-zinc-900 hover:bg-emerald-500">
+                      <PlusSmIcon class="-ml-1 mr-0.5 h-5 w-5 text-zinc-900" aria-hidden="true"/>
                       <span>
-                              Follow
-                            </span>
+                        Follow
+                      </span>
                     </button>
                   </div>
                 </li>
               </ul>
             </AsideSection>
             <AsideSection title="Trending">
-              <ul role="list" class="-my-4 divide-y divide-zinc-200">
+              <ul role="list" class="-my-4 divide-y divide-zinc-600">
                 <li v-for="post in trendingPosts" :key="post.id" class="flex py-4 space-x-3">
                   <div class="flex-shrink-0">
                     <img class="h-8 w-8 rounded-full" :src="post.user.imageUrl" :alt="post.user.name"/>
                   </div>
                   <div class="min-w-0 flex-1">
-                    <p class="text-sm text-zinc-800">{{ post.body }}</p>
+                    <p class="text-sm text-zinc-200">{{ post.body }}</p>
                     <div class="mt-2 flex">
                       <span class="inline-flex items-center text-sm">
-                        <button type="button" class="inline-flex space-x-2 text-zinc-400 hover:text-zinc-500">
+                        <button type="button" class="inline-flex space-x-2 text-zinc-400 hover:text-zinc-200">
                           <ChatAltIcon class="h-5 w-5" aria-hidden="true"/>
-                          <span class="font-medium text-zinc-900">{{ post.comments }}</span>
+                          <span class="font-medium text-zinc-100">{{ post.comments }}</span>
                         </button>
                       </span>
                     </div>
@@ -56,20 +56,20 @@
               </ul>
             </AsideSection>
             <AsideSection title="Latest">
-              <ul role="list" class="-my-4 divide-y divide-zinc-200">
+              <ul role="list" class="-my-4 divide-y divide-zinc-600">
                 <li v-for="post in trendingPosts" :key="post.id" class="flex py-4 space-x-3">
                   <div class="flex-shrink-0">
                     <img class="h-8 w-8 rounded-full" :src="post.user.imageUrl" :alt="post.user.name"/>
                   </div>
                   <div class="min-w-0 flex-1">
-                    <p class="text-sm text-zinc-800">{{ post.body }}</p>
+                    <p class="text-sm text-zinc-200">{{ post.body }}</p>
                     <div class="mt-2 flex">
-                            <span class="inline-flex items-center text-sm">
-                              <button type="button" class="inline-flex space-x-2 text-zinc-400 hover:text-zinc-500">
-                                <ChatAltIcon class="h-5 w-5" aria-hidden="true"/>
-                                <span class="font-medium text-zinc-900">{{ post.comments }}</span>
-                              </button>
-                            </span>
+                      <span class="inline-flex items-center text-sm">
+                          <button type="button" class="inline-flex space-x-2 text-zinc-400 hover:text-zinc-200">
+                            <ChatAltIcon class="h-5 w-5" aria-hidden="true"/>
+                            <span class="font-medium text-zinc-100">{{ post.comments }}</span>
+                          </button>
+                        </span>
                     </div>
                   </div>
                 </li>
@@ -195,6 +195,13 @@ const questions = [
   },
 ]
 const whoToFollow = [
+  {
+    name: 'Leonard Krasner',
+    handle: 'leonardkrasner',
+    href: '#',
+    imageUrl:
+        'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  },
   {
     name: 'Leonard Krasner',
     handle: 'leonardkrasner',
